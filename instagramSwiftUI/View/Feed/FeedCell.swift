@@ -11,7 +11,7 @@ struct FeedCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image("4")
+                Image("9")
                     .resizable()
                     .scaledToFill()
                     .frame(width: 36, height: 36)
@@ -23,7 +23,7 @@ struct FeedCell: View {
             }
             .padding([.leading, .bottom], 8)
             
-           Image("shop")
+           Image("10")
               .resizable()
               .scaledToFill()
               .frame(maxHeight: 440)
