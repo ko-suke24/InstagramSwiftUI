@@ -17,7 +17,7 @@ struct PostGridView: View {
                 NavigationLink(
                     destination: FeedView(),
                     label: {
-                        Image("9")
+                        Image("10")
                             .resizable()
                             .scaledToFill()
                             .frame(width: width, height: width)
