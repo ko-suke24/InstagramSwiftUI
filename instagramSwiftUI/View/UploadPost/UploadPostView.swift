@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct UploadPostView: View {
-    @State private var selectImage: UIImage?
+    @State private var selectedImage: UIImage?
     @State var postImage: Image?
     @State var captionText = ""
+    @State var imagePickerPresented = false
     
     var body: some View {
         VStack {
-            if postImage != nil {
-                Button(action: {}, label: {
+            if postImage == nil {
+                Button(action: { imagePickerPresented.toggle() }, label: {
                     Image(systemName: "camera.circle")
                         .resizable()
                         .renderingMode(.template)
@@ -25,11 +26,12 @@ struct UploadPostView: View {
                         .clipped()
                         .padding(.top, 56)
                         .foregroundColor(.black)
-                 
-            })
-            }else {
+                }).sheet(isPresented: $imagePickerPresented, onDismiss: loadImage, content: {
+                    ImagePicker(image:  $selectedImage)
+                })
+            }else if let image = postImage {
                 HStack {
-                    Image("10")
+                    image
                         .resizable()
                         .scaledToFill()
                         .frame(width: 96, height: 96)
@@ -49,6 +51,13 @@ struct UploadPostView: View {
             
             Spacer()
         }
+    }
+}
+
+extension UploadPostView {
+    func loadImage() {
+        guard let selectedImage = selectedImage else { return }
+        postImage = Image(uiImage: selectedImage)
     }
 }
 
