@@ -12,6 +12,9 @@ struct RegistrationView: View {
     @State private var Username = ""
     @State private var Fullname = ""
     @State private var password = ""
+    @State private var selectedImage: UIImage?
+    @State private var image: Image?
+    @State var imagePickerPresented = false
     @Environment(\.presentationMode) var mode
     
     var body: some View {
@@ -20,12 +23,27 @@ struct RegistrationView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Image(systemName: "camera.circle")
-                    .renderingMode(.template)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 140, height: 100)
-                    .foregroundColor(.white)
+                ZStack {
+                    if let image = image {
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 140, height: 100)
+                            .clipShape(Circle())
+                    } else {
+                        Button(action: { imagePickerPresented.toggle() }, label: {
+                            Image(systemName: "camera.circle")
+                                .renderingMode(.template)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 140, height: 100)
+                                .foregroundColor(.white)
+                        }).sheet(isPresented: $imagePickerPresented, onDismiss: loadImage, content: {
+                            ImagePicker(image: $selectedImage)
+                        })
+                    }
+                }.padding()
+
                 
                 VStack (spacing: 20){
                     CustomTextField(text: $email, placeholder: Text("メールアドレス"), imageName: "envelope")
@@ -77,6 +95,13 @@ struct RegistrationView: View {
                 }).padding()
             }
         }
+    }
+}
+
+extension RegistrationView {
+    func loadImage() {
+        guard let selectedImage = selectedImage else { return }
+        image = Image(uiImage: selectedImage)
     }
 }
 
