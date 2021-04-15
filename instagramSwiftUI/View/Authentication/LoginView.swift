@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -62,14 +63,17 @@ struct LoginView: View {
                     
                     Spacer()
                     
-                    HStack {
-                        Button(action: {}, label: {
-                            Text("Don't have an account?")
-                                .font(.system(size: 14))
-                            Text("Sign Up")
-                                .font(.system(size: 14, weight: .semibold))
-                        }).foregroundColor(.white)
-                    }.padding(.bottom)
+                    NavigationLink(
+                        destination: RegistrationView(),
+                        label: {
+                            HStack {
+                                    Text("Don't have an account?")
+                                        .font(.system(size: 14))
+                                    
+                                    Text("Sign Up")
+                                        .font(.system(size: 14, weight: .semibold))
+                                }.foregroundColor(.white)
+                            }).padding(.bottom)
                 }
             }.padding(.top, -50)
         }

@@ -8,8 +8,75 @@
 import SwiftUI
 
 struct RegistrationView: View {
+    @State private var email = ""
+    @State private var Username = ""
+    @State private var Fullname = ""
+    @State private var password = ""
+    @Environment(\.presentationMode) var mode
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            
+            VStack {
+                Image(systemName: "camera.circle")
+                    .renderingMode(.template)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 140, height: 100)
+                    .foregroundColor(.white)
+                
+                VStack (spacing: 20){
+                    CustomTextField(text: $email, placeholder: Text("メールアドレス"), imageName: "envelope")
+                        .padding()
+                        .background(Color(.init(white: 1, alpha: 0.15)))
+                        .cornerRadius(10)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 32)
+                    CustomTextField(text: $Username, placeholder: Text("ユーザーネーム"), imageName: "person")
+                        .padding()
+                        .background(Color(.init(white: 1, alpha: 0.15)))
+                        .cornerRadius(10)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 32)
+                    CustomTextField(text: $Fullname, placeholder: Text("名前"), imageName: "person")
+                        .padding()
+                        .background(Color(.init(white: 1, alpha: 0.15)))
+                        .cornerRadius(10)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 32)
+                    CustomSecureField(text: $password, placeholder: Text("パスワード"))
+                        .padding()
+                        .background(Color(.init(white: 1, alpha: 0.15)))
+                        .cornerRadius(10)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 32)
+                }
+                
+                Button(action: {}, label: {
+                    Text("新規登録")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(width: 360, height: 50)
+                        .background(Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)))
+                        .clipShape(Capsule())
+                        .padding()
+                })
+                
+                Spacer()
+                
+                Button(action: { mode.wrappedValue.dismiss() }, label: {
+                    HStack {
+                            Text("Already have an account?")
+                                .font(.system(size: 14))
+                            
+                            Text("Sign In")
+                                .font(.system(size: 14, weight: .semibold))
+                    }.foregroundColor(.white)
+                }).padding()
+            }
+        }
     }
 }
 
