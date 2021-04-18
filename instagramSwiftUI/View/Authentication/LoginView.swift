@@ -53,7 +53,7 @@ struct LoginView: View {
                     }
                     
                     Button(action: {
-                        viewModel.login()
+                        viewModel.login(withEmail: email, password: password)
                     }, label: {
                         Text("ログイン")
                             .font(.headline)
