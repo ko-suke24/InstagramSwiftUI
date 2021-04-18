@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RegistrationView: View {
     @State private var email = ""
-    @State private var Username = ""
-    @State private var Fullname = ""
+    @State private var username = ""
+    @State private var fullname = ""
     @State private var password = ""
     @State private var selectedImage: UIImage?
     @State private var image: Image?
@@ -53,13 +53,13 @@ struct RegistrationView: View {
                         .cornerRadius(10)
                         .foregroundColor(.white)
                         .padding(.horizontal, 32)
-                    CustomTextField(text: $Username, placeholder: Text("ユーザーネーム"), imageName: "person")
+                    CustomTextField(text: $username, placeholder: Text("ユーザーネーム"), imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .foregroundColor(.white)
                         .padding(.horizontal, 32)
-                    CustomTextField(text: $Fullname, placeholder: Text("名前"), imageName: "person")
+                    CustomTextField(text: $fullname, placeholder: Text("名前"), imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
@@ -74,7 +74,7 @@ struct RegistrationView: View {
                 }
                 
                 Button(action: {
-                    viewModel.register()
+                    viewModel.register(withEmail: email, password: password, image: selectedImage, fullname: fullname, username: username)
                 }, label: {
                     Text("新規登録")
                         .font(.headline)
