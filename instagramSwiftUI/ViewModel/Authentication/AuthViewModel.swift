@@ -47,7 +47,7 @@ class AuthViewModel: ObservableObject {
                 let data = ["email": email,
                             "username": username,
                             "fullname": fullname,
-                            "prifileimage": imageUrl,
+                            "profileImageUrl": imageUrl,
                             "uid": user.uid]
                 
                 COLLECTION_USERS.document(user.uid).setData(data) { _ in
