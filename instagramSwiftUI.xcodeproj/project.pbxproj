@@ -41,6 +41,7 @@
 		14C169D4262D2CB700487F06 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 14C169D3262D2CB700487F06 /* FirebaseAuth */; };
 		14C169D6262D2CB700487F06 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 14C169D5262D2CB700487F06 /* FirebaseFirestore */; };
 		14C169D8262D2CB700487F06 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 14C169D7262D2CB700487F06 /* FirebaseStorage */; };
+		14C169DB262D348400487F06 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C169DA262D348400487F06 /* SearchViewModel.swift */; };
 		14C48E9F261B3DEF002D295F /* ProfileActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C48E9E261B3DEF002D295F /* ProfileActionButton.swift */; };
 		14F992FB2626E25A0055A15A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F992FA2626E25A0055A15A /* CustomTextField.swift */; };
 		14F993022626E2CE0055A15A /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F993012626E2CE0055A15A /* CustomSecureField.swift */; };
@@ -77,6 +78,7 @@
 		14C169C2262C34FD00487F06 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		14C169C5262D210F00487F06 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		14C169C8262D274A00487F06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		14C169DA262D348400487F06 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		14C48E9E261B3DEF002D295F /* ProfileActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButton.swift; sourceTree = "<group>"; };
 		14F992FA2626E25A0055A15A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		14F993012626E2CE0055A15A /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				1462A83026176032003B1E2E /* Authentication */,
 				1462A82F2617602D003B1E2E /* Notifications */,
 				1462A82E2617602A003B1E2E /* Feed */,
+				14C169DA262D348400487F06 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				14FD6098261AD1E80094B751 /* UserStatView.swift in Sources */,
 				1482EB842618F37700616E3B /* UserCell.swift in Sources */,
 				14F993022626E2CE0055A15A /* CustomSecureField.swift in Sources */,
+				14C169DB262D348400487F06 /* SearchViewModel.swift in Sources */,
 				1482EB792617D40E00616E3B /* SearchBar.swift in Sources */,
 				1462A84726176255003B1E2E /* NotificationsView.swift in Sources */,
 				14C169C9262D274A00487F06 /* User.swift in Sources */,
