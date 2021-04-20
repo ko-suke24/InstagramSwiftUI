@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145C1878262DCB2B0097F7BD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C1877262DCB2B0097F7BD /* ProfileViewModel.swift */; };
+		145C187B262DD3B20097F7BD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C187A262DD3B20097F7BD /* UserService.swift */; };
 		1462A80E2616E21A003B1E2E /* instagramSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462A80D2616E21A003B1E2E /* instagramSwiftUIApp.swift */; };
 		1462A8122616E21E003B1E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1462A8112616E21E003B1E2E /* Assets.xcassets */; };
 		1462A8152616E21E003B1E2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1462A8142616E21E003B1E2E /* Preview Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		145C1877262DCB2B0097F7BD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		145C187A262DD3B20097F7BD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		1462A80A2616E21A003B1E2E /* instagramSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1462A80D2616E21A003B1E2E /* instagramSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramSwiftUIApp.swift; sourceTree = "<group>"; };
 		1462A8112616E21E003B1E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				14C169C2262C34FD00487F06 /* ImageUploader.swift */,
+				145C187A262DD3B20097F7BD /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 		1462A83126176034003B1E2E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				145C1877262DCB2B0097F7BD /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				1462A80E2616E21A003B1E2E /* instagramSwiftUIApp.swift in Sources */,
 				14B27AB226245EBC00C8CB07 /* ImagePicker.swift in Sources */,
 				1462A84126176217003B1E2E /* FeedView.swift in Sources */,
+				145C187B262DD3B20097F7BD /* UserService.swift in Sources */,
 				1482EB90261AB5FE00616E3B /* ProfileHeaderView.swift in Sources */,
 				1462A833261760D8003B1E2E /* MainTabView.swift in Sources */,
 				14FD6098261AD1E80094B751 /* UserStatView.swift in Sources */,
@@ -410,6 +417,7 @@
 				14C169C9262D274A00487F06 /* User.swift in Sources */,
 				1462A84A26176A5D003B1E2E /* FeedCell.swift in Sources */,
 				14C169C0262B38C800487F06 /* AuthViewModel.swift in Sources */,
+				145C1878262DCB2B0097F7BD /* ProfileViewModel.swift in Sources */,
 				1482EB872618F38800616E3B /* UserListView.swift in Sources */,
 				1482EB8D261A74A400616E3B /* NotificationCell.swift in Sources */,
 				14BBE2D62626649800C8E2C9 /* LoginView.swift in Sources */,
